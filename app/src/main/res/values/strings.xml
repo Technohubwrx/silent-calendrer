@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Silent Calendrer</string>
+    <string name="trademark" translatable="false">TechnoHub™</string>
+
+    <!-- Ringer modes -->
+    <string name="mode_ringing">Ringing</string>
+    <string name="mode_silent">Silent</string>
+    <string name="mode_vibration">Vibration</string>
+
+    <!-- Section labels -->
+    <string name="section_now">Now</string>
+    <string name="section_earlier">Earlier today</string>
+    <string name="section_upcoming">Upcoming</string>
+
+    <!-- Empty states -->
+    <string name="empty_now">No meeting right now</string>
+    <string name="empty_earlier">No earlier meetings today</string>
+    <string name="empty_upcoming">No more meetings today</string>
+    <string name="empty_no_calendar_permission">Calendar access needed</string>
+    <string name="empty_no_calendars">No synced calendars found</string>
+    <string name="untitled_meeting">(No title)</string>
+    <string name="until_time">until %1$s</string>
+    <string name="time_range">%1$s – %2$s</string>
+
+    <!-- Status banner -->
+    <string name="issue_calendar">Calendar access is off. No meetings can be read.</string>
+    <string name="issue_dnd">Do Not Disturb access is off. The ringer will not be switched automatically.</string>
+    <string name="issue_exact_alarm">Exact alarms are off. Switching may be several minutes late.</string>
+    <string name="issue_notifications">Notifications are off. You won\'t see the silence status or warnings.</string>
+    <string name="issue_switch_failed">The phone did not switch to Silent when asked (it reported %1$s).</string>
+    <string name="issue_tap_to_fix">Tap to fix</string>
+
+    <!-- Onboarding -->
+    <string name="onb_title">Set up Silent Calendrer</string>
+    <string name="onb_intro">Silent Calendrer silences your phone 10 minutes before each meeting and turns the ringer back on 15 minutes after it ends. It needs a few permissions to do this.</string>
+    <string name="onb_calendar_title">Calendar access</string>
+    <string name="onb_calendar_body">Reads the meetings from calendars synced to this phone, including Google accounts. Nothing leaves your phone.</string>
+    <string name="onb_dnd_title">Do Not Disturb access</string>
+    <string name="onb_dnd_body">Android only lets apps with this access switch the phone to Silent and back. On the next screen, turn it on for Silent Calendrer.</string>
+    <string name="onb_alarm_title">Alarms and reminders</string>
+    <string name="onb_alarm_body">Lets the app switch at the exact minute. Without it, Android may delay switching by several minutes.</string>
+    <string name="onb_notif_title">Notifications</string>
+    <string name="onb_notif_body">Shows \"Silent until …\" during meetings and warns you if switching fails.</string>
+    <string name="onb_battery_title">Battery (optional)</string>
+    <string name="onb_battery_body">Some phone makers stop background apps. If switching is unreliable on your phone, allow Silent Calendrer to run without battery restrictions.</string>
+    <string name="onb_grant">Grant</string>
+    <string name="onb_open_settings">Open settings</string>
+    <string name="onb_granted">Granted</string>
+    <string name="onb_done">Continue</string>
+    <string name="onb_skip_warning">Missing permissions limit what the app can do. You can grant them later from the warning on the main screen.</string>
+
+    <!-- Notifications -->
+    <string name="channel_enforcement">Meeting silence</string>
+    <string name="channel_enforcement_desc">Shown while the phone is kept silent for a meeting.</string>
+    <string name="channel_alerts">Problems</string>
+    <string name="channel_alerts_desc">Warnings when the ringer could not be switched.</string>
+    <string name="notif_silent_until">Silent until %1$s</string>
+    <string name="notif_silent_body">Your phone is silenced for a meeting.</string>
+    <string name="notif_let_it_ring">Let it ring</string>
+
+    <!-- Let it ring / resume -->
+    <string name="paused_until">Paused until %1$s · tap to silence</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_timing">Silence timing (all meetings)</string>
+    <string name="settings_lead">Silence before a meeting</string>
+    <string name="settings_tail">Ring again after a meeting</string>
+    <string name="settings_minutes">%1$d min</string>
+    <string name="settings_calendars">Calendars that silence the phone</string>
+    <string name="settings_calendars_none">No calendars found. Grant calendar access first.</string>
+    <string name="settings_permissions">Permissions</string>
+    <string name="settings_reset">Reset to 10 / 15</string>
+    <string name="settings_done">Done</string>
+    <string name="settings_open">Settings</string>
+    <string name="notif_cannot_switch_title">Couldn\'t silence your phone</string>
+    <string name="notif_cannot_switch_body">A meeting is starting, but Do Not Disturb access is off. Tap to fix.</string>
+</resources>
