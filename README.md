@@ -17,6 +17,35 @@ Requirements: Android SDK with platform 36 (`local.properties` points to it) and
 
 The version shown in the footer comes from `versionName` in `app/build.gradle.kts`.
 
+## Release build
+
+Release builds are shrunk and optimized with R8 (about 5 MB instead of 34 MB for debug) and must
+be signed with **your** key. Keep the key file and its passwords safe and backed up: every future
+update has to be signed with the same key.
+
+1. Create the key once (choose your own passwords when asked):
+
+   ```bash
+   "$JAVA_HOME/bin/keytool" -genkeypair -v -keystore silentcalendrer-release.jks -alias silentcalendrer -keyalg RSA -keysize 4096 -validity 10000
+   ```
+
+2. Create `keystore.properties` next to `settings.gradle.kts` (git ignores it and `*.jks`):
+
+   ```properties
+   storeFile=silentcalendrer-release.jks
+   storePassword=<your store password>
+   keyAlias=silentcalendrer
+   keyPassword=<your key password>
+   ```
+
+3. Build: `./gradlew assembleRelease` → `app/build/outputs/apk/release/app-release.apk`.
+
+Without `keystore.properties` the release APK is left unsigned. For a local test install only,
+`./gradlew assembleRelease -PsignReleaseWithDebugKey=true` signs it with the debug key.
+
+Switching a phone from the debug build to the release build needs one uninstall first (the
+signatures differ), so permissions and settings must be granted/set again once.
+
 ## How it works
 
 ```
